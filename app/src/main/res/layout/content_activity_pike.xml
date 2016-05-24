@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll"
+    android:layout_below="@+id/dipim"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:transitionGroup="false"
+    android:background="#fbf59d"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.useran.a30sec.ActivityPike"
+    tools:showIn="@layout/activity_pike"
+    android:background="#fbf59d"
+    android:gravity="start|end">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/pike"
+        android:src="@drawable/pike"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" Исходное положение: Руки на полу немного шире, чем на ширине плеч. Поставить ноги с упором на носки на высоту от 30 до 90 см от пола.
+Выполнение упражнения: На 4 счета, напрягая мышцы пресса, стараемся поднять ягодицы из исходного положения, толкая вес на пальцы ног (как изображено на рисунке). Зафиксировать положение на 4 счета, и на 4 счета вернуться в исходное положение. Для упрощения выполнения — ноги расположены на полу.
+Время выполнения: 1 мин.
+В упражнении задействованы мышцы: рук, груди, спины, пресса."
+        android:textSize="18sp"
+        android:textColor="#3a3a3b"
+        android:id="@+id/textPike"
+        android:layout_marginTop="270dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Запустите таймер"
+        android:id="@+id/textTimer"
+        android:textSize="22sp"
+        android:textColor="#3a3a3b"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textPike"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStart"
+        android:id="@+id/btnStart"
+        android:layout_below="@+id/textTimer"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
+</ScrollView>

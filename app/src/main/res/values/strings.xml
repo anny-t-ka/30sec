@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">30sec</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_spisok">MainSpisok</string>
+    <string name="title_activity_activity_push">ActivityPush</string>
+    <string name="title_activity_activity_dip">ActivityDip</string>
+    <string name="title_activity_activity_sit">ActivitySit</string>
+    <string name="title_activity_activity_lunge">ActivityLunge</string>
+    <string name="title_activity_activity_thread">ActivityThread</string>
+    <string name="title_activity_activity_pike">ActivityPike</string>
+    <string name="btnStart">Начать</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll"
+    android:layout_below="@+id/dipim"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:background="#fbf59d"
+    android:clickable="true"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.useran.a30sec.ActivitySit"
+    tools:showIn="@layout/activity_sit"
+    android:background="#fbf59d">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/Sit"
+        android:src="@drawable/sit"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Исходное положение: сидя, прижаться спиной к стене, колени согнуты (угол 90 градусов).
+Выполнение упражнения: поднять и выпрямить ногу на уровне бедра, параллельно полу. Удерживать положение в течении 30 сек., затем поменять ногу.
+В данном упражнении задействованы мышцы: пресса, ягодиц, ног (квадрицепс)."
+        android:id="@+id/textSit"
+        android:textSize="18sp"
+        android:textColor="#3a3a3b"
+        android:layout_below="@+id/Sit"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Запустите таймер"
+        android:id="@+id/textTimer"
+        android:textSize="22sp"
+        android:textColor="#3a3a3b"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textSit"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStart"
+        android:id="@+id/btnStart"
+        android:layout_below="@+id/textTimer"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+</ScrollView>

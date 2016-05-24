@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll"
+    android:layout_below="@+id/dipim"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:background="#fbf59d"
+    android:transitionGroup="false">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.useran.a30sec.ActivityLunge"
+    tools:showIn="@layout/activity_lunge"
+    android:background="#fbf59d">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/Lunge"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/lunge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Исходное положение: встать спиной к стене на расстояние ок. 1 метра. Поднять правую ногу, и прижать пальцы ноги к стене. Левую ногу согнуть в колене в глубоком приседе. Развести руки в стороны параллельно полу.
+Выполнение упражнения:  Далее скручиваем тело таким образом, чтобы правая рука фиксировалась возле левой ноги (как на рисунке), левая рука прямая направлена вверх. Затем возвращаемся в исходное положение, и на 4 счета выпрямляемся в ногах, еще на 4 счета опускаемся и скручиваем тело.  Для облегчения упражнения — не скручивайте тело.
+Время выполнения: 2 мин. На каждую ногу.
+В данном упражнении задействованы мышцы: пресса, ягодиц, ног (квадрицепс)."
+        android:textSize="18sp"
+        android:textColor="#3a3a3b"
+        android:id="@+id/textLunge"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Lunge"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Запустите таймер"
+        android:id="@+id/textTimer"
+        android:textSize="22sp"
+        android:textColor="#3a3a3b"
+        android:layout_below="@+id/textLunge"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStart"
+        android:id="@+id/btnStart"
+        android:layout_below="@+id/textTimer"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+</RelativeLayout>
+</ScrollView>
