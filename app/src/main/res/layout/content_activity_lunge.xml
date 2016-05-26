@@ -10,7 +10,8 @@
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true"
     android:background="#fbf59d"
-    android:transitionGroup="false">
+    android:transitionGroup="false"
+    style="@style/ThemeOverlay.AppCompat.Dark">
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -22,7 +23,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.useran.a30sec.ActivityLunge"
     tools:showIn="@layout/activity_lunge"
-    android:background="#fbf59d">
+    android:background="#fbf59d"
+    style="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -51,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Запустите таймер"
+        android:text=""
         android:id="@+id/textTimer"
         android:textSize="22sp"
         android:textColor="#3a3a3b"
@@ -62,10 +64,47 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnStart"
+        android:text="ЗАПУСТИТЕ ТАЙМЕР"
         android:id="@+id/btnStart"
         android:layout_below="@+id/textTimer"
         android:layout_centerHorizontal="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnStart"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        style="@style/ThemeOverlay.AppCompat.Dark">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="на главную"
+            android:id="@+id/Btnback1"
+            android:layout_below="@+id/btnStart"
+            android:layout_alignRight="@+id/textTimer"
+            android:layout_alignEnd="@+id/textTimer"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_weight="1"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Далее"
+            android:id="@+id/Btnnext1"
+            android:width="1dp"
+            android:layout_weight="1"
+            android:layout_alignBaseline="@+id/textTimer"
+            android:layout_alignBottom="@+id/textTimer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+    </LinearLayout>
+
 </RelativeLayout>
 </ScrollView>

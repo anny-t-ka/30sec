@@ -1,5 +1,6 @@
 package com.useran.a30sec;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -14,12 +15,12 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ActivitySit extends AppCompatActivity {
+public class ActivitySit extends AppCompatActivity implements View.OnClickListener {
 
     ImageView Sit;
     TextView textSit,textTimer;
     ScrollView scroll;
-    Button btnStart;
+    Button btnStart, Btnnext1, Btnback1;
     MyTimer mTimer;
     long remainMilli = 0;
     boolean isRunning=false;
@@ -37,6 +38,12 @@ public class ActivitySit extends AppCompatActivity {
         scroll = (ScrollView) findViewById(R.id.scroll);
         btnStart = (Button)findViewById(R.id.btnStart);
         textTimer=(TextView)findViewById(R.id.textTimer);
+
+        Btnnext1 = (Button)findViewById(R.id.Btnnext1);
+        Btnback1 = (Button)findViewById(R.id.Btnback1);
+
+        Btnnext1.setOnClickListener(this);
+        Btnback1.setOnClickListener(this);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +109,16 @@ public class ActivitySit extends AppCompatActivity {
     public void onClick(View v) {
         // TODO Auto-generated method stub
         scroll.scrollTo(0, 0);
+        switch (v.getId()) {
+            case R.id.Btnnext1:
+                Intent intent = new Intent(this, ActivityLunge.class);
+                startActivity(intent);
+                break;
+            case R.id.Btnback1:
+                Intent intent1 = new Intent(this, MainActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 
 

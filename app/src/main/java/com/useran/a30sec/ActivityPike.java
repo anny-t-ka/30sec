@@ -1,5 +1,6 @@
 package com.useran.a30sec;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -14,11 +15,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ActivityPike extends AppCompatActivity {
+public class ActivityPike extends AppCompatActivity implements View.OnClickListener {
     ScrollView scroll;
     TextView textPike, textTimer;
     ImageView pike;
-    Button btnStart;
+    Button btnStart, Btnback1;
     MyTimer mTimer;
     long remainMilli = 0;
     boolean isRunning=false;
@@ -33,6 +34,10 @@ public class ActivityPike extends AppCompatActivity {
         scroll=(ScrollView)findViewById(R.id.scroll);
         btnStart = (Button)findViewById(R.id.btnStart);
         textTimer=(TextView)findViewById(R.id.textTimer);
+        Btnback1 = (Button)findViewById(R.id.Btnback1);
+
+
+        Btnback1.setOnClickListener(this);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +103,12 @@ public class ActivityPike extends AppCompatActivity {
     public void onClick(View v) {
         // TODO Auto-generated method stub
         scroll.scrollTo(0, 0);
+        switch (v.getId()) {
+            case R.id.Btnback1:
+                Intent intent1 = new Intent(this, MainActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 
 }

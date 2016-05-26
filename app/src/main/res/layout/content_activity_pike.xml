@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Запустите таймер"
+        android:text=""
         android:id="@+id/textTimer"
         android:textSize="22sp"
         android:textColor="#3a3a3b"
@@ -67,9 +67,30 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnStart"
+        android:text="запустите таймер"
         android:id="@+id/btnStart"
         android:layout_below="@+id/textTimer"
         android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnStart"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="на главную"
+            android:id="@+id/Btnback1"
+            android:layout_below="@+id/btnStart"
+            android:layout_alignRight="@+id/textTimer"
+            android:layout_alignEnd="@+id/textTimer"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_weight="1" />
+
+            </LinearLayout>
 </RelativeLayout>
 </ScrollView>
