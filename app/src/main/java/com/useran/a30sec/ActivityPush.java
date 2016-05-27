@@ -2,6 +2,7 @@ package com.useran.a30sec;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -78,6 +79,8 @@ public class ActivityPush extends Activity implements View.OnClickListener {
         public MyTimer(long millisInFuture, long countDownInterval) {
             super(millisInFuture, countDownInterval);
         }
+
+
         // this method called when timer is finished
         @Override
         public void onFinish() {
@@ -89,6 +92,10 @@ public class ActivityPush extends Activity implements View.OnClickListener {
             Toast toast = Toast.makeText(ActivityPush.this, "УПРАЖНЕНИЕ ВЫПОЛНЕНО!",Toast.LENGTH_SHORT);
             toast.show();
             toast.setGravity(Gravity.CENTER, 0,0);
+
+            final MediaPlayer mp = MediaPlayer.create(ActivityPush.this,R.raw.ding);
+            mp.start();
+
         }
         //this method is called for every iteration of time interval
         @Override

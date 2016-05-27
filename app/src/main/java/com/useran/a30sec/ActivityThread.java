@@ -1,6 +1,7 @@
 package com.useran.a30sec;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -83,6 +84,9 @@ public class ActivityThread extends AppCompatActivity implements View.OnClickLis
             btnStart.setText("Начать");
             isRunning=false;
             remainMilli=0;
+            final MediaPlayer mp = MediaPlayer.create(ActivityThread.this,R.raw.ding);
+            mp.start();
+
             Toast toast = Toast.makeText(ActivityThread.this, "УПРАЖНЕНИЕ ВЫПОЛНЕНО!",Toast.LENGTH_SHORT);
             toast.show();
             toast.setGravity(Gravity.CENTER, 0,0);
